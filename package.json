@@ -1,0 +1,19 @@
+{
+  "$schema": "http://www.schemastore.org/package.json",
+  "name": "slop-album",
+  "private": true,
+  "type": "module",
+  "module": "index.ts",
+  "scripts": {
+    "format": "oxfmt",
+    "upload": "rclone copy --progress --verbose --transfers 8 ./out remote:album/Slop"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@typescript/native-preview": "^7.0.0-dev.20260508.1",
+    "oxfmt": "^0.48.0"
+  }
+}
